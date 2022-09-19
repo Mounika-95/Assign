@@ -3,8 +3,6 @@ import 'package:assignment/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  // Firebase.initializeApp();
   runApp(MyApp());
 }
 
