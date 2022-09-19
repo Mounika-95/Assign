@@ -66,7 +66,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   validator: (value) {
-                    return _password.length > 6
+                    return _password.length > 5
                         ? null
                         : "Password should contain min 6 characters";
                   },
@@ -80,7 +80,6 @@ class _LoginState extends State<Login> {
                 ),
                 RaisedButton(
                   onPressed: (() {
-                
                     Login();
                   }),
                   child: Container(
@@ -113,6 +112,7 @@ class _LoginState extends State<Login> {
             context,
             MaterialPageRoute(builder: (context) => Homepage()),
             (Route<dynamic> route) => false);
+        Fluttertoast.showToast(msg: 'Login succussfully');
       }).catchError((onError) {
         setState(() {
           _isloading = false;
@@ -120,6 +120,5 @@ class _LoginState extends State<Login> {
         Fluttertoast.showToast(msg: "error" + onError.toString());
       });
     }
-    }
   }
-
+}
