@@ -80,7 +80,6 @@ class _LoginState extends State<Login> {
                 ),
                 RaisedButton(
                   onPressed: (() {
-                
                     Login();
                   }),
                   child: Container(
@@ -120,6 +119,5 @@ class _LoginState extends State<Login> {
         Fluttertoast.showToast(msg: "error" + onError.toString());
       });
     }
-    }
   }
-
+}
